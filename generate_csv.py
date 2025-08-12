@@ -65,7 +65,7 @@ def process_logs(folder_path, output_csv):
                         try:
                             data = json.load(json_file)
                             turns = data.get('turns', 0)
-                            if turns <= 2:
+                            if turns < 2:
                                 continue
                             room_id = data.get("roomid", '').split("-")[2]
                             p1 = data.get('p1', '')
