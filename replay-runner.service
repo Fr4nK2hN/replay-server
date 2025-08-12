@@ -1,0 +1,20 @@
+[Unit]
+Description=Pokemon Showdown Replay Runner
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=showdown
+Group=showdown
+WorkingDirectory=/var/www/replay-server
+ExecStart=/bin/bash /var/www/replay-server/replay_runner.sh
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONPATH=/var/www/replay-server
+
+[Install]
+WantedBy=multi-user.target
