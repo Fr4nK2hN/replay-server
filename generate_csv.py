@@ -3,7 +3,7 @@ import csv
 import json
 import re
 
-server_location = "https://staraptorshowdown.com"
+server_location = "https://play.psfantasy.xyz"
 
 month_to_index = {
     'Jan': '01',
